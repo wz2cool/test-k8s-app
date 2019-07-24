@@ -27,13 +27,13 @@ spec:
             mountPath: /host/proc
           - name: root
             mountPath: /rootfs
-        volumes:
-          - name:  proc
-            hostPath:
-              path: /proc
-          - name: sys
-            hostPath: 
-              path: /sys
-          - name: root
-            hostPath: 
-              path: /
+      volumes:
+        - name:  proc
+          hostPath:
+            path: /proc
+        - name: sys
+          hostPath: 
+            path: /sys
+        - name: root
+          hostPath: 
+            path: /
