@@ -24,7 +24,7 @@ spec:
           - name: proc
             mountPath: /host/proc
           - name: sys 
-            mountPath: /host/proc
+            mountPath: /host/sys
           - name: root
             mountPath: /rootfs
       volumes:
