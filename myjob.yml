@@ -3,6 +3,7 @@ kind: Job
 metadata:
   name:  myjob
 spec:
+  parallelism: 2
   template:
     metadata:
       name:  myjob
@@ -11,4 +12,4 @@ spec:
       - name: hello
         image: busybox
         command: ["echo", "hello k8s job!"]
-      restartPolicy: Never
+      restartPolicy: OnFailure
