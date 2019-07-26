@@ -13,7 +13,7 @@ spec:
       containers:
       - name: httpd2
         image: httpd
-        prots:
+        ports:
         - containerPort: 80
 ---
 apiVersion: v1
