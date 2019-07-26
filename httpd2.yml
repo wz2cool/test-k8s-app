@@ -14,7 +14,7 @@ spec:
       - name: httpd2
         image: httpd
         prots:
-        - containerPort: 8
+        - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
