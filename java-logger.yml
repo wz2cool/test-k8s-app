@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: java-logger
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        run: java-logger
+        editor: vscode
+    spec:
+      containers:
+      - name: java-logger
+        image: registry.cn-shanghai.aliyuncs.com/frwan-test/java-logger:latest
+        ports:
+        - containerPort: 8091
