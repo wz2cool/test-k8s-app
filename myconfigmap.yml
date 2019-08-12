@@ -5,4 +5,6 @@ metadata:
   labels:
     app: myapplication
 data:
-  my-key: my-value
+  PUBLIC_MYSQL_URL_INNODEALING: jdbc:mysql://192.168.8.190:3306
+  PUBLIC_MYSQL_USER_INNODEALING: root
+  PUBLIC_MYSQL_PASSWD_INNODEALING: test123
