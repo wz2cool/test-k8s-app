@@ -15,3 +15,20 @@ spec:
         image: registry.cn-shanghai.aliyuncs.com/frwan-test/java-logger:latest
         ports:
         - containerPort: 8091
+        env:
+          - name: PUBLIC_MYSQL_URL_INNODEALING
+            valueFrom:
+              configMapKeyRef:
+                name: public-config
+                key:  PUBLIC_MYSQL_URL_INNODEALING
+          - name: PUBLIC_MYSQL_USER_INNODEALING
+            valueFrom:
+              configMapKeyRef:
+                name: public-config
+                key:  PUBLIC_MYSQL_USER_INNODEALING
+          - name: PUBLIC_MYSQL_PASSWD_INNODEALING
+            valueFrom:
+              configMapKeyRef:
+                name: public-config
+                key:  PUBLIC_MYSQL_PASSWD_INNODEALING
+          
