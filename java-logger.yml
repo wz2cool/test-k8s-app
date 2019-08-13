@@ -13,6 +13,8 @@ spec:
       containers:
       - name: java-logger
         image: registry.cn-shanghai.aliyuncs.com/frwan-test/java-logger:latest
+        command: ["/bin/sh"]
+        args: ["-c", "sleep 10 && echo Sleep expired > /dev/termination-log"]
         ports:
         - containerPort: 8091
         env:
