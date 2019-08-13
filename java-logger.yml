@@ -18,7 +18,7 @@ spec:
         - containerPort: 8091
         envFrom:
         - configMapRef:
-          name: public-config
+            name: public-config
 
 
           
