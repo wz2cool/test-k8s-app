@@ -8,12 +8,9 @@ spec:
       image: k8s.gcr.io/busybox
       command: [ "/bin/sh", "-c", "env" ]
       env:
-        # Define the environment variable
-        - name: SPECIAL_LEVEL_KEY
-          valueFrom:
-            configMapKeyRef:
-              # The ConfigMap containing the value you want to assign to SPECIAL_LEVEL_KEY
-              name: special-config
-              # Specify the key associated with the value
-              key: special.how
+         - name: PUBLIC_MYSQL_URL_INNODEALING
+           valueFrom:
+              configMapKeyRef:
+                name: public-config
+                key:  public.mysql.url
   restartPolicy: Never
