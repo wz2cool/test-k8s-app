@@ -13,7 +13,7 @@ spec:
       containers:
       - name: java-logger
         image: registry.cn-shanghai.aliyuncs.com/frwan-test/java-logger:latest
-        terminationMessagePath: "/dev/k8s/termination/java-logger-log"
+        terminationMessagePath: "/tmp/java-logger-log"
         ports:
         - containerPort: 8091
         env:
