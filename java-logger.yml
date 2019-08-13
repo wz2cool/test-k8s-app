@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1beta2
 kind: Deployment
 metadata:
   name: java-logger
@@ -16,28 +16,9 @@ spec:
         terminationMessagePath: "/tmp/java-logger-log"
         ports:
         - containerPort: 8091
-        env:
-          - name: PUBLIC_MYSQL_URL_INNODEALING
-            valueFrom:
-            configMapKeyRef:
-              # The ConfigMap containing the value you want to assign to SPECIAL_LEVEL_KEY
-              name: public-config
-              # Specify the key associated with the value
-              key: public.mysql.url
-          - name: PUBLIC_MYSQL_USR_INNODEALING
-            valueFrom:
-            configMapKeyRef:
-              # The ConfigMap containing the value you want to assign to SPECIAL_LEVEL_KEY
-              name: public-config
-              # Specify the key associated with the value
-              key: public.mysql.user
-          - name: PUBLIC_MYSQL_PASSWD_INNODEALING
-            valueFrom:
-            configMapKeyRef:
-              # The ConfigMap containing the value you want to assign to SPECIAL_LEVEL_KEY
-              name: public-config
-              # Specify the key associated with the value
-              key: public.mysql.password
+        envFrom:
+        - configMapRef:
+          name: public-config
 
 
           
