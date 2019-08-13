@@ -21,15 +21,15 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: public-config
-                key:  PUBLIC_MYSQL_URL_INNODEALING
+                key:  public.mysql.url
           - name: PUBLIC_MYSQL_USER_INNODEALING
             valueFrom:
               configMapKeyRef:
                 name: public-config
-                key:  PUBLIC_MYSQL_USER_INNODEALING
+                key:  public.mysql.user
           - name: PUBLIC_MYSQL_PASSWD_INNODEALING
             valueFrom:
               configMapKeyRef:
                 name: public-config
-                key:  PUBLIC_MYSQL_PASSWD_INNODEALING
+                key:  public.mysql.password
           
