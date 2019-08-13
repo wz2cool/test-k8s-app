@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta2
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: java-logger
@@ -13,12 +13,9 @@ spec:
       containers:
       - name: java-logger
         image: registry.cn-shanghai.aliyuncs.com/frwan-test/java-logger:latest
-        terminationMessagePath: "/tmp/java-logger-log"
         ports:
-        - containerPort: 8091
+          - containerPort: 8091
         envFrom:
-        - configMapRef:
-            name: public-config
-
-
+          - configMapRef:
+              name: public-config
           
