@@ -31,8 +31,8 @@ spec:
   - name:  http
     protocol: TCP
     port:  80
-    nodePort: 20080
+    nodePort: 30080
   - name: https
     protocol: TCP
     port: 443
-    nodePort: 20443
+    nodePort: 30443
